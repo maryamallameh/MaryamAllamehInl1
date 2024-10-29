@@ -1,0 +1,6 @@
+1. Pull är när man tar in information och push är när man sänder ut information.
+2. Log är för att se alla commits och status är för att se hur filerna ligger till. 
+3. Git branch är för att kunna kopiera över från master projektet i en annan branch för att eventuellt testa något utan att påverka huvudkoden.
+4. Git reset, flyttar HEAD till en tidigare commit och ändrar historiken, exempel på detta är "soft"  används när man vill ta bort ändringarna från staging området, men vill behålla dem i arbetskatalogen. 
+Git revert, skapar en ny commit och ändrar inte arbetskatalogen. 
+Git restore, gör ingen förändring i historiken, återställer i arbetskatalogen, den återställer filer till senaste versionen. 
