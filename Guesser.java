@@ -1,29 +1,18 @@
 import java.io.Console;
 
-/**
- * Assignment 1 - Guessing Game
- * 
- * Here's the unfinished source code
- * for the Guesser class. It is your
- * task to complete the missing parts.
- */
-	public class Guesser{
+public class Guesser{
+ 
   	private int low;
   	private int high;
+
 	public Guesser(int low, int high) {
         this.low = low;
         this.high = high;
     }
-  
-   * Task 2. Complete the start() method, so that
-   * in the method body, you call first the
-   * rules() method, next the doGuesses() method.
-   */
-  public void start(){
-    // call the rules method here
-    // call the doGuesses() method here
-  }
-
+  public void start() {
+        rules();
+        doGuesses();
+    }
   private void rules(){
     System.out.println("Think of a number between " +
                        low + " and "  + high);
@@ -32,25 +21,14 @@ import java.io.Console;
     System.out.println("Please answer T for true, and F for false.\n");
   }
 
-  /*
-   * Task 3. Complete the code for the getReply() method.
-   * In the current version below, it returns null each
-   * call, which is not what this method is supposed to do.
-   * 
-   * Instead, change the method so that it reads a reply
-   * from the player, and if it is "T" or "F", we have
-   * a valid reply. Return the String that you read from
-   * the player.
-   */
   private String getReply(){
-    String reply = null;
-    // Write code here which reads a String from the console.
-    // As long as it is not a valid reply (one of "T" and "F")
-    // write an error message, and read a new reply.
-    // When you have gotten a valid reply, return it.
+    String reply = System.console().readLine(); 
+  while(!reply.equals("T")&&!reply.equals("F")) {
+  System.out.println("Please answer T or F");
+  reply=System.console().readLine();
+  }
     return reply;
   }
-
   private void doGuesses(){
     int i=0; // number of guesses
     int middle=0;
